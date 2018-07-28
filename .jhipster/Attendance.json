@@ -1,0 +1,35 @@
+{
+    "name": "Attendance",
+    "fields": [
+        {
+            "fieldName": "attendanceId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "clockIn",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "clockOut",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "employee",
+            "otherEntityName": "employee",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180728070439",
+    "entityTableName": "attendance",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}

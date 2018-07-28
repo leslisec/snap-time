@@ -38,6 +38,9 @@ public class CacheConfiguration {
             cm.createCache(sg.com.snaptime.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(sg.com.snaptime.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(sg.com.snaptime.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(sg.com.snaptime.domain.Employee.class.getName(), jcacheConfiguration);
+            cm.createCache(sg.com.snaptime.domain.Employee.class.getName() + ".attendances", jcacheConfiguration);
+            cm.createCache(sg.com.snaptime.domain.Attendance.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
