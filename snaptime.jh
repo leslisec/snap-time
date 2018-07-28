@@ -1,0 +1,30 @@
+
+/**
+ * The Employee entity.
+ */
+entity Employee {
+    employeeId Long,
+	name String,
+	companyName String
+}
+
+entity Attendance {
+	attendanceId Long,
+    clockIn ZonedDateTime,
+    clockOut ZonedDateTime
+}
+
+relationship OneToMany {
+	Employee{Attendance} to Attendance
+}
+
+
+// Set pagination options
+paginate Employee with infinite-scroll
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+// Set an angular suffix
+angularSuffix * with mySuffix
